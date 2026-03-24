@@ -1,0 +1,97 @@
+body {
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#tris {
+    display: grid;
+
+    width: 30vw;
+    height: 30vw;
+
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+
+    border-style: solid;
+    border-color: gray;
+    border-width: 0.4vw;
+
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+}
+
+span {
+    border-style: solid;
+    border-color: gray;
+    border-width: 0.3vw;
+}
+
+span:hover {
+    background-color: gainsboro;
+}
+
+#top-left {
+    border-top-left-radius: 0.5vw;
+}
+
+#top-right {
+    border-top-right-radius: 0.5vw;
+}
+
+#bottom-left {
+    border-bottom-left-radius: 0.5vw;
+}
+
+#bottom-right {
+    border-bottom-right-radius: 0.5vw;
+}
+
+button {
+    margin-top: 5vh;
+
+    width: 6em;
+    height: 2em;
+
+    font-size: 2vw;
+
+    border-width: 0;
+    border-radius: 1em;
+
+    background-color: lightgray;
+    color: gray;
+    box-shadow: 0 0.3em gray;
+}
+
+button:hover {
+    background-color: gray;
+    color: white;
+    box-shadow: 0 0.3em rgb(64, 64, 64);
+}
+
+button:active {
+    transform: translateY(0.5vh);
+}
+
+@media (max-width: 600px) {
+    #tris {
+        width: 60vw;
+        height: 60vw;
+
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+    }
+
+    button {
+        font-size: 4vw;
+    }
+}
